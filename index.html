@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rock Paper Scissors</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container-main">
+      <h1>Rock Paper Scissors</h1>
+      <div class="container-round-scores">
+        <h2>Round:</h2>
+        <h2 id="round">0</h2>
 
-</head>
-<body>
-  <h1>Rock Paper Scissors</h1>
+        <h2>Human Score</h2>
+        <p id="human-score">0</p>
 
-  <h2>Round:</h2>
-  <h2 id="round"></h2>
+        <h2>Computer Score</h2>
+        <p id="computer-score">0</p>
+      </div>
 
-  <h2>Human Score</h2>
-  <p id="human-score"></p>
+      <div class="container-buttons-rps">
+        <h2>Press on one of the following buttons!</h2>
+        <div id="menu">
+          <button id="rock">ROCK</button>
+          <button id="paper">PAPER</button>
+          <button id="scissors">SCISSORS</button>
+          <button id="reset">RESET</button>
+        </div>
+      </div>
 
-  <h2>Computer Score</h2>
-  <p id="computer-score"></p>
-<script src="script.js"></script>
-</body>
+      <div class="container-message">
+        <p id="message">Make your choice!</p>
+      </div>
+    </div>
+  </body>
 </html>
