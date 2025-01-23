@@ -46,16 +46,16 @@ function displayMessage(message) {
   messagePara.innerText = message;
 }
 
-function disableButtons() {
-  rock.disabled = true;
-  paper.disabled = true;
-  scissors.disabled = true;
-}
-
-function enableButtons() {
-  rock.disabled = false;
-  paper.disabled = false;
-  scissors.disabled = false;
+function buttons() {
+  if (gameState.rounds === 5) {
+    rock.disabled = true;
+    paper.disabled = true;
+    scissors.disabled = true;
+  } else {
+    rock.disabled = false;
+    paper.disabled = false;
+    scissors.disabled = false;
+  }
 }
 
 function displayWinner() {
@@ -89,7 +89,7 @@ function playRound(humanChoice) {
 
   if (gameState.rounds === 5) {
     displayWinner();
-    disableButtons();
+    buttons();
     restartButton.style.display = "block";
   }
 }
@@ -99,7 +99,7 @@ function restartGame() {
   gameState = initializeGame();
   displayMessage("Make your choice!");
   displayScores();
-  enableButtons();
+  buttons();
   restartButton.style.display = "none";
 }
 
